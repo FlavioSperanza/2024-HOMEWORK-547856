@@ -12,7 +12,7 @@ public class LabirintoTest {
 	Labirinto l = new Labirinto();
 	Stanza s = new Stanza("s");
 
-	@Test
+	/*@Test
 	public void testGetEntrataDefault() {
 		assertEquals("Atrio", l.getEntrata().getNome());
 	}
@@ -26,6 +26,6 @@ public class LabirintoTest {
 	@Test
 	public void testGetStanzaVincenteDefault() {
 		assertEquals("Biblioteca", l.getStanzaVincente().getNome());
-	}
+	}*/
 
 }

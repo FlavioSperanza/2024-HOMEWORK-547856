@@ -1,6 +1,6 @@
 package Comandi;
 
-import it.uniroma3.diadia.IO;
+import it.uniroma3.diadia.IO; 
 import it.uniroma3.diadia.IOConsole;
 import it.uniroma3.diadia.Partita;
 import it.uniroma3.diadia.ambienti.Stanza;

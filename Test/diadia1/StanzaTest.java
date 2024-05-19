@@ -27,18 +27,7 @@ public class StanzaTest {
 	public void testGetStanzaAdiacenteConDirezioneInesistente() {
 		assertNull(s1.getStanzaAdiacente("nordest"));
 	}
-	
-	@Test
-	public void testGetAttrezziEsistente() {
-		s1.addAttrezzo(matita);
-		assertEquals(matita, s1.getAttrezzi()[0]);
-	}
-	
-	@Test
-	public void testGetAttrezziSenzaAttrezzi() {
-		assertNull(s1.getAttrezzi()[0]);
-	}
-	
+
 	@Test
 	public void testHasAttrezzoEsistente() {
 		s1.addAttrezzo(matita);

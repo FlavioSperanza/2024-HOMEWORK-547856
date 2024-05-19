@@ -9,11 +9,13 @@ import Comandi.ComandoNonValido;
 import Comandi.ComandoVai;
 import Comandi.FabbricaDiComandiFisarmonica;
 import it.uniroma3.diadia.Partita;
+import it.uniroma3.diadia.ambienti.Labirinto;
 
 public class FabbricaDiComandiFisarmonicaTest {
+	Labirinto labirinto = new Labirinto();
 	FabbricaDiComandiFisarmonica fabbrica = new FabbricaDiComandiFisarmonica();
 	Comando comando;
-	Partita partita = new Partita();
+	Partita partita = new Partita(labirinto);
 
 
 	@Test

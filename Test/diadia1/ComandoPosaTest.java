@@ -7,10 +7,12 @@ import org.junit.Test;
 import Comandi.ComandoPosa;
 import it.uniroma3.diadia.IOConsole;
 import it.uniroma3.diadia.Partita;
+import it.uniroma3.diadia.ambienti.Labirinto;
 import it.uniroma3.diadia.attrezzi.Attrezzo;
 
 public class ComandoPosaTest {
-	Partita partita = new Partita();
+	Labirinto labirinto = new Labirinto();
+	Partita partita = new Partita(labirinto);
 	Attrezzo matita = new Attrezzo("matita",2);
 	ComandoPosa comando = new ComandoPosa();
 	IOConsole io = new IOConsole();
