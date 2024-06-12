@@ -3,6 +3,7 @@ package diadia1;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+import it.uniroma3.diadia.ambienti.Direzione;
 import it.uniroma3.diadia.ambienti.Stanza;
 import it.uniroma3.diadia.attrezzi.Attrezzo;
 
@@ -14,7 +15,7 @@ public class StanzaTest {
 
 	@Test
 	public void testImpostaStanzaAdiacenteEsistente() {
-		s1.impostaStanzaAdiacente("nord", nord);
+		s1.impostaStanzaAdiacente(Direzione.nord, nord);
 		assertEquals("errore su stanza adiacente esistente",nord, s1.getStanzaAdiacente("nord"));
 	}
 	
@@ -27,18 +28,7 @@ public class StanzaTest {
 	public void testGetStanzaAdiacenteConDirezioneInesistente() {
 		assertNull(s1.getStanzaAdiacente("nordest"));
 	}
-	
-	@Test
-	public void testGetAttrezziEsistente() {
-		s1.addAttrezzo(matita);
-		assertEquals(matita, s1.getAttrezzi()[0]);
-	}
-	
-	@Test
-	public void testGetAttrezziSenzaAttrezzi() {
-		assertNull(s1.getAttrezzi()[0]);
-	}
-	
+
 	@Test
 	public void testHasAttrezzoEsistente() {
 		s1.addAttrezzo(matita);
