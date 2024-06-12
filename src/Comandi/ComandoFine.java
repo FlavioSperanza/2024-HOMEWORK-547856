@@ -1,42 +1,25 @@
 package Comandi;
 
-import it.uniroma3.diadia.IO;
-import it.uniroma3.diadia.IOConsole;
+
 import it.uniroma3.diadia.Partita;
 
-public class ComandoFine implements Comando {
-	private IO io;
+public class ComandoFine extends AbstractComando {
+	private final static String NOME = "fine";
+	public final static String MESSAGGIO_FINE = "Grazie di aver giocato";
+
 
 	@Override
 	public void esegui(Partita partita) {
-		this.io = new IOConsole();
-		this.io.mostraMessaggio("Grazie di aver giocato!");  // si desidera smettere
-	}
-
-
-	@Override
-	public void setParametro(String parametro) {
-		// TODO Auto-generated method stub
+		partita.setFinita();
+		this.getIo().mostraMessaggio(MESSAGGIO_FINE);  // si desidera smettere
 
 	}
-	
-	@Override
-	public void setIo(IO io) {
-		this.io=io;
-		
-	}
-
 
 	@Override
 	public String getNome() {
-		return "fine";
+		return NOME;
 	}
 
-
-	@Override
-	public String getParametro() {
-		return null;
-	}
 
 
 }

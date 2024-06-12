@@ -2,12 +2,12 @@ package it.uniroma3.diadia.ambienti;
 
 public class StanzaBloccata extends Stanza{
 	
-	private String direzioneBloccata;
+	private Direzione direzioneBloccata;
 	private String attrezzoChiave;
 
-	public StanzaBloccata(String nome, String bloccata, String chiave) {
+	public StanzaBloccata(String nome, Direzione direzione, String chiave) {
 		super(nome);
-		this.direzioneBloccata = bloccata;
+		this.direzioneBloccata = direzione;
 		this.attrezzoChiave = chiave;
 	}
 	
